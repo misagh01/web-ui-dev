@@ -14,10 +14,10 @@
 
             <nav>
                 <a href="#" class="hide-desktop">
-                    <img src="images/ham.svg" alt="toggle menu" id="menu">
+                    <img src="images/ham.svg" alt="toggle menu" id="menu" class="menu">
                 </a>
 
-                <ul class="show-desktop hide-desktop" id="nav">
+                <ul class="show-desktop hide-mobile" id="nav">
                     <li id="exit" class="exit-btn hide-desktop">
                         <img src="images/exit.svg" alt="exit">
                     </li>
@@ -30,12 +30,12 @@
         </header>
 
         <section>
-            <img src="images/server.svg" alt="server">
+            <img src="images/server.svg" alt="server" class="server">
             <h1>
                 Powerfull Servers For All IT Men
             </h1>
             <p class="subhead">our servers are the best but cheap for you</p>
-            <img src="images/scroll.svg" alt="scroll down" class="scroll show-mobile hide-desktop">
+            <img src="images/scroll.svg" alt="scroll down" class="scroll show-desktop hide-mobile">
         </section>
     </div>
     <div class="blue-container">
@@ -76,21 +76,21 @@
                     </figure>
                 </li>
                 <li>
-                        <figure>
-                            <img src="images/user2.png" alt="user testimonial">
-                            <blockquote>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, maxime!
-                            </blockquote>
-                            <figcaption>- John Doe</figcaption>
-                        </figure>
-                    </li>
+                    <figure>
+                        <img src="images/user2.png" alt="user testimonial">
+                        <blockquote>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, maxime!
+                        </blockquote>
+                        <figcaption>- John Doe</figcaption>
+                    </figure>
+                </li>
             </ul>
         </div>
     </div>
 
     <div class="container">
         <h2>Start your free trial now!</h2>
-        <a href="#">Get Started</a>
+        <a href="#" class="cta">Get Started</a>
     </div>
 
     <footer>
@@ -107,5 +107,25 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        
+        var menu = document.getElementById("menu");
+        var nav = document.getElementById("nav");
+        var exit = document.getElementById("exit");
+
+        menu.addEventListener('click', function(e) {
+            nav.classList.toggle('hide-mobile');
+            e.preventDefault();
+        });
+
+        exit.addEventListener('click', function(e) {
+            nav.classList.add('hide-mobile');
+            e.preventDefault();
+        });
+
+
+    
+    </script>
 </body>
 </html>
